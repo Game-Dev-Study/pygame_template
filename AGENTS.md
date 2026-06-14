@@ -1,9 +1,10 @@
 # Project Instructions
 
-이 저장소는 Pygame 기반 2D 게임 템플릿이다. 파일을 읽고 쓸 때 한국어가 포함될 수 있으므로 UTF-8 인코딩을 우선 사용한다.
+이 저장소는 Pygame 기반 2D 게임 템플릿을 활용해 작업하는 게임 프로젝트이다. 파일을 읽고 쓸 때 한국어가 포함될 수 있으므로 UTF-8 인코딩을 우선 사용한다.
 
 ## Structure
 
+- `.project`는 게임의 기획 문서를 저장하는 폴더이다. 사용자 요청에 따라 참고할 필요가 있을 경우 참고한다.
 - `main.py`는 배포/일반 실행 진입점이며 `Game`을 실행한다.
 - `develop.py`는 개발 실행 진입점이며 `DebugGame`과 HUD를 실행한다.
 - `settings.py`에는 사용자 설정, 입력 상수, 개발 설정을 둔다.
@@ -30,7 +31,7 @@
 - 새 element 구현체를 만들기 전에 해당 root folder의 `global` 폴더를 확인해서 이미 재사용 가능한 요소가 있는지 먼저 살핀다.
 - 파일 경로는 `{root_folder}/{scene_name}/{element_name}.py` 형태를 사용한다. 예: `ui/title_scene/start_button.py`.
 - 여러 scene에서 함께 쓸 가능성이 큰 공용 구현체는 scene name 폴더가 아니라 `{root_folder}/global/{element_name}.py`에서 관리한다.
-- 해당 root folder의 `__init__.py`에는 `# scene_name` 주석을 만들고, 그 아래에 해당 scene의 구현체 import를 모아둔다.
+- 해당 root folder의 `{root_folder}/__init__.py`에는 `# scene_name` 주석을 만들고, 그 아래에 해당 scene의 구현체 import를 모아둔다.
 - global 구현체 import는 `__init__.py`의 `# global` 주석 아래에 모아둔다.
 - 나중에 `ui/` 외의 다른 관리 폴더가 생겨도 같은 방식으로 scene별 구현체를 배치한다.
 
