@@ -1,4 +1,6 @@
-.project
+.project/*
+!.project/AGENTS.md
+!.project/.gitkeep
 
 assets/*
 !assets/**/
