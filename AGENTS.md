@@ -39,6 +39,8 @@ Game ─X→ Scenes / UI
 
 ## General Rules
 
+- 사용자의 허락 없이 새로운 파일 경로를 만들지 않는다.
+- 사용자의 직접적인 요청이 없으면 `.gitignore`를 수정하지 않는다.
 - Pygame 이벤트 큐는 `Game.read_inputs()`에서만 읽는다. scene이나 UI 내부에서 `pygame.event.get()`을 다시 호출하지 않는다.
 - 게임 로직과 렌더링 좌표는 기본적으로 `virtual_screen` 기준 좌표를 사용한다.
 - 실제 화면 크기는 코드가 제공하는 해상도 값으로만 변경하며 `pygame.RESIZABLE`을 사용하지 않는다.
